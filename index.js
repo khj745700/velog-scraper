@@ -60,7 +60,6 @@ async function checkAndNotifyNewPosts() {
     const newPosts = [];
     console.log('scrap date : ', new Date());
     const articles = await scrapeVelogTrending();
-    console.log('articles : ', articles);
     for (const article of articles) {
         const [rows] = await connection.execute('SELECT * FROM posts WHERE id = ?', [article.id]);
         
@@ -126,8 +125,7 @@ function getPostMessage(post) {
 (async () => {
     await initializeDatabase();
     console.log('🚀 Velog 크롤러 실행 중...');
-    await checkAndNotifyNewPosts();
-    // await cronExecute();
+    await cronExecute();
 })();
 
 
