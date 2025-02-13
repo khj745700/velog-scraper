@@ -23,5 +23,11 @@ DB_PORT=데이터베이스 포트
 DISCORD_WEBHOOK_URL=디스코드 웹훅 URL
 ```
 
+## 실행방법
+```sh
+yarn install
+node index.js
+```
+
 ---
 추가적인 문제나 건의사항이 있으시면 Issues로 남겨주시면 반영해 손볼 수 있도록 하겠습니다!
