@@ -32,8 +32,10 @@ async function initializeDatabase() {
 
 async function scrapeVelogTrending() {
     const browser = await puppeteer.launch({ 
-        headless: true
+        headless: true,
+        executablePath: '/usr/bin/chromium-browser'
      });
+     
     const page = await browser.newPage();
     await page.goto(VELOG_TREND_URL);
 
