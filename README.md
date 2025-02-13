@@ -24,7 +24,8 @@ DISCORD_WEBHOOK_URL=디스코드 웹훅 URL
 ```
 
 ## 실행방법
-```sh
+
+```console
 yarn install
 node index.js
 ```
